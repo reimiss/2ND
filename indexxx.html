@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Užduočių sąrašas</title>
+</head>
+<body>
+
+<div class="container">
+    <div id="todo" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>Užduotys <span class="add-task" onclick="addTask()">+</span></h2>
+        <div id="task1" class="task" draggable="true" ondragstart="drag(event)" contenteditable="true">Užduotis 1</div>
+        <div id="task2" class="task" draggable="true" ondragstart="drag(event)" contenteditable="true">Užduotis 2</div>
+        <div id="task3" class="task" draggable="true" ondragstart="drag(event)" contenteditable="true">Užduotis 3</div>
+    </div>
+
+    <div id="in-progress" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>Vykdomos</h2>
+    </div>
+
+    <div id="completed" class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>Įvykdytos</h2>
+    </div>
+
+    <div id="recycle-bin" class="task-list" ondrop="removeTask(event)" ondragover="allowDrop(event)">
+        <h2>Šiukšliadėžė <i class="fas fa-recycle"></i></h2>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
